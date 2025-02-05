@@ -4,16 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gestor de Tarefas</title>
-  <link rel="stylesheet" href="/src/styles/main.css">
+  <link rel="stylesheet" href="./src/styles/main.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Gestor de Tarefas</h1>
-    <form id="task-form">
-      <input type="text" id="task-input" placeholder="Nova tarefa..." required>
-      <button type="submit">Adicionar</button>
-    </form>
-    <ul id="task-list"></ul>
+  <div class="notebook">
+    <!-- Área de adicionar tarefas (fora da folha) -->
+    <div class="add-task-area">
+      <h1>Adicionar Tarefa</h1>
+      <form id="task-form">
+        <input type="text" id="task-input" placeholder="Digite uma nova tarefa..." required>
+        <button type="submit">Adicionar</button>
+      </form>
+    </div>
+
+    <!-- Folha de caderno -->
+    <div class="notebook-page">
+      <div class="notebook-lines">
+        <h2>Minhas Tarefas</h2>
+        <ul id="task-list"></ul>
+      </div>
+    </div>
   </div>
   <script type="module" src="./src/js/app.js"></script>
 </body>

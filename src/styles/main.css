@@ -1,77 +1,118 @@
+/* Reset básico */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #28abb4;
     margin: 0;
     padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #f5f5f5;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
   }
   
-  .container {
-    background: #fcfcfc;
-    padding: 20px;
-    border-radius: 8px;
+  /* Container do caderno */
+  .notebook {
+    display: flex;
+    background-color: #fff;
+    border: 1px solid #ccc;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    width: 90%;
+    max-width: 800px;
+    padding: 20px;
   }
   
-  h1 {
-    text-align: center;
+  /* Área de adicionar tarefas */
+  .add-task-area {
+    width: 30%;
+    padding: 20px;
+    border-right: 2px dashed #ccc;
+  }
+  
+  .add-task-area h1 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
   }
   
   #task-form {
     display: flex;
-    margin-bottom: 20px;
+    flex-direction: column;
   }
   
   #task-input {
-    flex: 1;
     padding: 10px;
+    margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    font-family: 'Courier New', Courier, monospace;
   }
   
-  button {
+  #task-form button {
     padding: 10px;
-    background: #28a745;
+    background-color: #28a745;
     color: #fff;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    margin-left: 10px;
+    font-family: 'Courier New', Courier, monospace;
   }
   
-  button:hover {
-    background: #218838;
+  #task-form button:hover {
+    background-color: #218838;
   }
   
-  ul {
+  /* Folha de caderno */
+  .notebook-page {
+    width: 70%;
+    padding: 20px;
+    background-color: #f9f9f9;
+    position: relative;
+  }
+  
+  .notebook-lines {
+    background: repeating-linear-gradient(
+      #f9f9f9,
+      #f9f9f9 24px,
+      #ccc 25px,
+      #ccc 26px
+    );
+    padding: 20px;
+    border-left: 2px solid #ccc;
+  }
+  
+  .notebook-lines h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Lista de tarefas */
+  #task-list {
     list-style: none;
     padding: 0;
+    margin: 0;
   }
   
-  li {
+  #task-list li {
     display: flex;
     justify-content: space-between;
-    padding: 10px;
+    align-items: center;
+    padding: 10px 0;
     border-bottom: 1px solid #ccc;
   }
   
-  li:last-child {
+  #task-list li:last-child {
     border-bottom: none;
   }
   
-  li button {
-    background: #dc3545;
+  #task-list li button {
+    background-color: #dc3545;
     border: none;
     color: #fff;
     padding: 5px 10px;
     border-radius: 4px;
     cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
   }
   
-  li button:hover {
-    background: #c82333;
+  #task-list li button:hover {
+    background-color: #c82333;
   }
